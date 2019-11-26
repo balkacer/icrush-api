@@ -14,9 +14,7 @@ let db = {
   screams: [
     {
       userHandle: 'user',
-      userTagged: 'enmah',
       body: 'This is a sample scream',
-      type: 'public | private',
       createdAt: '2019-03-15T10:59:52.798Z',
       userHandle: 'user',
       likeCount: 5,

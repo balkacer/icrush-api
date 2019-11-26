@@ -11,9 +11,7 @@ exports.getAllScreams = (req, res) => {
             screams.push({
                 screamId: doc.id,
                 body: doc.data().body,
-                type: req.body.type,
                 userHandle: doc.data().userHandle,
-                userTagged: doc.data().userTagged,
                 createdAt: doc.data().createdAt
             });
         });
@@ -31,10 +29,8 @@ exports.postOneScream = (req, res) => {
 
     const newScream = {
         body: req.body.body,
-        type: req.body.type,
         userHandle: req.user.handle,
         userImage: req.user.imageUrl,
-        userTagged: req.user.userTagged,
         createdAt: new Date().toISOString(),
         likeCount: 0,
         commentCount: 0
